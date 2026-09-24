@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoSoluciones 24/7 C.F.T. - Soluciones Corporativas e Integrales</title>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy-dark: #070f1e;
+            --navy-medium: #0f1c3f;
+            --primary-blue: #0284c7;
+            --primary-hover: #0369a1;
+            --accent-gold: #d97706;
+            --accent-light: #fbbf24;
+            --slate-text: #334155;
+            --gray-bg: #f8fafc;
+            --white: #ffffff;
+            --border-color: #cbd5e1;
+            --shadow-subtle: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+            --shadow-card: 0 10px 30px -5px rgba(15, 23, 42, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--gray-bg);
+            color: var(--slate-text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--navy-dark);
+        }
+
+        /* Top Bar Institucional */
+        .top-bar {
+            background-color: var(--navy-dark);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .top-bar-phones {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .top-bar span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .top-bar i {
+            color: var(--accent-light);
+        }
+
+        .top-bar-badge {
+            background: rgba(217, 119, 6, 0.2);
+            color: var(--accent-light);
+            padding: 0.25rem 0.85rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(217, 119, 6, 0.4);
+            text-transform: uppercase;
+        }
+
+        /* Header Corporativo Sólido */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            background: linear-gradient(135deg, var(--navy-medium) 0%, var(--navy-dark) 100%);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            font-size: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--navy-dark);
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-title span {
+            color: var(--primary-blue);
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--slate-text);
+            font-weight: 600;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        .btn-nav {
+            background-color: var(--navy-dark);
+            color: var(--white) !important;
+            padding: 0.65rem 1.5rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+            font-weight: 700 !important;
+        }
+
+        .btn-nav:hover {
+            background-color: var(--primary-blue);
+        }
+
+        /* Hero Section Impactante y Serio */
+        .hero {
+            padding: 8rem 2rem 7rem 2rem;
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-medium) 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.2rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--accent-light);
+        }
+
+        .hero-lema {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.85rem 2rem;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: var(--white);
+            border: 1px solid var(--accent-gold);
+        }
+
+        .btn-primary:hover {
+            background-color: #b45309;
+            border-color: #b45309;
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: var(--white);
+        }
+
+        /* Barra de Propuesta de Valor (Confianza) */
+        .value-props {
+            max-width: 1200px;
+            margin: -3.5rem auto 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: var(--shadow-card);
+            border-top: 4px solid var(--primary-blue);
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .value-card i {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            background: #e0f2fe;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .value-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.35rem;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* Sección de Servicios Seria y Estructurada */
+        .services {
+            max-width: 1300px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-tag {
+            color: var(--primary-blue);
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem 2rem 2rem 2rem;
+            border-radius: 6px;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border-color);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card);
+            border-color: var(--primary-blue);
+        }
+
+        .service-content-wrapper {
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card .service-icon {
+            font-size: 2rem;
+            color: var(--navy-dark);
+            margin-bottom: 1.5rem;
+            background: #f1f5f9;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Cuadrito / Botón de Contratar Inmediatamente */
+        .btn-contratar {
+            background-color: var(--navy-dark);
+            color: var(--white);
+            border: 1px solid var(--navy-dark);
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .btn-contratar:hover {
+            background-color: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: var(--white);
+        }
+
+        /* Modal / Cuadro de diálogo de confirmación */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(7, 15, 30, 0.75);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-box {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 6px;
+            max-width: 480px;
+            width: 90%;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border-top: 4px solid var(--accent-gold);
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .modal-box p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        .modal-close:hover {
+            color: var(--navy-dark);
+        }
+
+        /* Sección NUEVA: Alianzas B2B / Red de Empresas Dependientes */
+        .b2b-network-section {
+            max-width: 1300px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .b2b-network-card {
+            background: linear-gradient(135deg, #070f1e 0%, #0f1c3f 100%);
+            border-radius: 12px;
+            padding: 4rem 3rem;
+            color: var(--white);
+            box-shadow: 0 20px 40px rgba(7, 15, 30, 0.2);
+            border: 2px solid var(--accent-gold);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .b2b-network-content h2 {
+            font-size: 2.2rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .b2b-network-content h2 span {
+            color: var(--accent-light);
+        }
+
+        .b2b-network-content p {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .b2b-features {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .b2b-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-light);
+        }
+
+        .b2b-action-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+            min-width: 280px;
+        }
+
+        .b2b-action-box h3 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .b2b-action-box p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Sección de Registro / B2B corporativo general */
+        .b2b-banner {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+            margin-top: 6rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .b2b-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .b2b-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            font-weight: 800;
+        }
+
+        .b2b-banner p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Footer Ejecutivo */
+        footer {
+            background: #040812;
+            color: var(--white);
+            padding: 5rem 2rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .footer-col p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-bottom {
+            max-width: 1300px;
+            margin: 0 auto;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        @media(max-width: 900px) {
+            .b2b-network-card {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem;
+            }
+        }
+
+        @media(max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero-lema {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar Institucional -->
+    <div class="top-bar">
+        <div class="top-bar-phones">
+            <span><i class="fa-solid fa-phone"></i> 0412-6100684</span>
+            <span><i class="fa-solid fa-phone"></i> 0412-0906860</span>
+            <span><i class="fa-solid fa-phone"></i> 0426-2842432</span>
+        </div>
+        <div class="top-bar-badge">
+            <i class="fa-solid fa-shield-halved"></i> Operación Nacional 24/7 (Venezuela)
+        </div>
+    </div>
+
+    <!-- Header Corporativo -->
+    <header>
+        <div class="nav-container">
+            <a href="#inicio" class="logo-container">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-building-shield"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">TodoSoluciones <span>24/7</span></span>
+                    <span class="logo-subtitle">C.F.T. Corporativo</span>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#alianzas">Red Empresarial</a></li>
+                    <li><a href="#contacto" class="btn-nav">Contacto Directo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Soluciones Integrales para Hogares, <span>Empresas y Comercios</span></h1>
+            <div class="hero-lema">"Si no lo tenemos, te lo conseguimos"</div>
+            <p>La plataforma institucional de servicios técnicos, logísticos y profesionales con estándares rigurosos de calidad, seguridad y respuesta inmediata en todo el territorio nacional.</p>
+            <div class="hero-buttons">
+                <a href="#servicios" class="btn btn-primary"><i class="fa-solid fa-cubes"></i> Catálogo de Servicios</a>
+                <a href="#alianzas" class="btn btn-outline"><i class="fa-solid fa-handshake"></i> Unir mi Empresa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra de Propuesta de Valor -->
+    <div class="value-props">
+        <div class="value-card">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <div>
+                <h3>Disponibilidad 24/7</h3>
+                <p>Respuesta y soporte operativo continuo sin interrupciones los 365 días del año.</p>
+            </div>
+        </div>
+        <div class="value-card">
+            <i class="fa-solid fa-user-check"></i>
+            <div>
+                <h3>Personal Certificado</h3>
+                <p>Expertos altamente calificados, rigurosamente evaluados para garantizar máxima confianza.</p>
+            </div>
+        </div>
+        <div class="value-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+                <h3>Garantía y Respaldo</h3>
+                <p>Estándares corporativos formales que aseguran la correcta ejecución de cada labor.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="section-header">
+            <span class="section-tag">Portafolio Profesional</span>
+            <h2 class="section-title">Ecosistema de Soluciones Avanzadas</h2>
+            <p class="section-subtitle">Selecciona el servicio de tu preferencia para iniciar la contratación inmediata</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Publicidad y Marketing para Empresas -->
+            <div class="service-card" style="border-top: 4px solid var(--accent-gold);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon" style="background: #fef3c7; color: #d97706;"><i class="fa-solid fa-bullhorn"></i></div>
+                    <h3>Publicidad & Marketing B2B</h3>
+                    <p>Estrategias comerciales de alto impacto, gestión de presencia digital y posicionamiento corporativo diseñado para el mercado actual.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Publicidad & Marketing B2B')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Vigilancia y Seguridad Privada -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-shield-screen"></i></div>
+                    <h3>Vigilancia & Seguridad Privada</h3>
+                    <p>Personal de seguridad profesional para resguardo de comercios, corporaciones, residencias y protección de eventos especiales.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Vigilancia & Seguridad Privada')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Servidores en Empresas -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+                    <h3>Infraestructura TI & Servidores</h3>
+                    <p>Despliegue, configuración y mantenimiento crítico de servidores locales, sistemas en red y virtualización para empresas e ISPs.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Infraestructura TI & Servidores')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Enlaces RF para Compañías -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+                    <h3>Enlaces RF & Telecomunicaciones</h3>
+                    <p>Ingeniería, instalación y alineación de radioenlaces (PtP / PtMP) de alta estabilidad para operadores de internet y corporaciones.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Enlaces RF & Telecomunicaciones')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Fibra Óptica / FTTH -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Fibra Óptica FTTH</h3>
+                    <p>Fusiones de precisión, certificación de enlaces de fibra óptica y optimización de redes residenciales y de gran escala.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Fibra Óptica FTTH')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Taller y Mecánica -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
+                    <h3>Asistencia & Mecánica Ligera</h3>
+                    <p>Soporte vial rápido, solución de averías mecánicas elementales y asistencia técnica directa en estacionamiento.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Asistencia & Mecánica Ligera')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Electricidad -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Sistemas Eléctricos</h3>
+                    <p>Mantenimiento preventivo y correctivo de tableros eléctricos, cableados estructurados y corrección de fallas industriales y residenciales.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Sistemas Eléctricos')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Aire Acondicionado -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-snowflake"></i></div>
+                    <h3>Climatización & Refrigeración</h3>
+                    <p>Instalación, mantenimiento integral, cargas de gas y servicio técnico especializado en sistemas de aire acondicionado.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Climatización & Refrigeración')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Plomería -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+                    <h3>Plomería & Hidroneumáticos</h3>
+                    <p>Mantenimiento de redes de agua, corrección de filtraciones severas, bombas hidroneumáticas y destapes industriales.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Plomería & Hidroneumáticos')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Redes Wi-Fi -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-wifi"></i></div>
+                    <h3>Redes Inalámbricas & Wi-Fi</h3>
+                    <p>Diseño de cobertura de red robusta, optimización de enrutadores y conectividad sin puntos ciegos para hogares y oficinas.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Redes Inalámbricas & Wi-Fi')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Electrónica -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Tecnología & Domótica</h3>
+                    <p>Integración de sistemas inteligentes, domótica del hogar, sistemas de cámaras de seguridad y soporte electrónico avanzado.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Tecnología & Domótica')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Albañilería -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-trowel"></i></div>
+                    <h3>Obra Civil & Albañilería</h3>
+                    <p>Remodelaciones integrales, acabados de primera, impermeabilización y pintura de superficies para inmuebles comerciales y residenciales.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Obra Civil & Albañilería')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Delivery y Mandados -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-box-open"></i></div>
+                    <h3>Logística & Delivery</h3>
+                    <p>Transporte seguro de encomiendas, despachos comerciales y diligencias operativas ejecutadas con puntualidad y rigor.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Logística & Delivery')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Taxi y Moto Taxi -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-taxi"></i></div>
+                    <h3>Movilidad Ejecutiva</h3>
+                    <p>Servicios de traslado personal y ejecutivo rápido, monitoreado y con estrictos estándares de seguridad.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Movilidad Ejecutiva')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Fiestas Infantiles y Eventos -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                    <h3>Organización de Eventos</h3>
+                    <p>Producción logística integral, animación, ambientación y soporte técnico para celebraciones memorables.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Organización de Eventos')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Alquiler de Sonido y Equipos -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-volume-high"></i></div>
+                    <h3>Sonido Profesional & Equipos</h3>
+                    <p>Alquiler de sistemas de audio de alta fidelidad, iluminación escénica y tarimas para eventos de cualquier magnitud.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Sonido Profesional & Equipos')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Apoyo Espiritual y Oración -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-hands-praying"></i></div>
+                    <h3>Apoyo Espiritual</h3>
+                    <p>Servicio de capellanía, visitas de apoyo pastoral y consejería espiritual guiada para momentos de necesidad.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Apoyo Espiritual')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Enfermería y Salud -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-user-nurse"></i></div>
+                    <h3>Salud & Enfermería</h3>
+                    <p>Asistencia clínica profesional domiciliaria, aplicación de tratamientos, curaciones y monitoreo de constantes vitales.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Salud & Enfermería')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Cuidado de Enfermos -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-bed-pulse"></i></div>
+                    <h3>Asistencia a Adultos Mayores</h3>
+                    <p>Cuidado especializado y supervisión continua para pacientes postoperatorios o de la tercera edad con personal cualificado.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Asistencia a Adultos Mayores')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Peluquería y Barbería -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-scissors"></i></div>
+                    <h3>Estilismo & Barbería</h3>
+                    <p>Servicios de cuidado personal y estética a domicilio con un enfoque higiénico, puntual y altamente profesional.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Estilismo & Barbería')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Cuidado de Mascotas -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-paw"></i></div>
+                    <h3>Aseo de Mascotas</h3>
+                    <p>Servicios móviles especializados de peluquería, higiene y paseo para el bienestar integral de tus animales de compañía.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Aseo de Mascotas')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Veterinaria a Domicilio -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-dog"></i></div>
+                    <h3>Atención Veterinaria</h3>
+                    <p>Consultas clínicas preventivas, vacunación y chequeos generales a domicilio con profesionales en medicina veterinaria.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Atención Veterinaria')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+
+            <!-- Asesoría Legal -->
+            <div class="service-card" style="border-top: 4px solid var(--primary-blue);">
+                <div class="service-content-wrapper">
+                    <div class="service-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>Asesoría Legal</h3>
+                    <p>Consultoría jurídica colegiada en materia civil, mercantil, laboral y de familia brindada por abogados expertos.</p>
+                </div>
+                <button class="btn-contratar" onclick="abrirModal('Asesoría Legal')"><i class="fa-solid fa-bolt"></i> Contratar inmediatamente</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN / TARJETA: Red de Aliados Comerciales (Modelo donde las empresas dependen de ti) -->
+    <section id="alianzas" class="b2b-network-section">
+        <div class="b2b-network-card">
+            <div class="b2b-network-content">
+                <span class="section-tag" style="color: var(--accent-light);">Modelo de Negocio Exclusivo</span>
+                <h2>Haz que tu empresa forme parte de la <span>Red Centralizada de TodoSoluciones</span></h2>
+                <p>Implementamos un sistema donde centralizamos la demanda masiva de clientes. Todo cliente corporativo o residencial interesado en tus servicios pasa primero por nuestra central de operaciones, asegurándote un flujo constante de ingresos sin que tengas que gastar en publicidad.</p>
+                
+                <div class="b2b-features">
+                    <div class="b2b-feature-item"><i class="fa-solid fa-circle-check"></i> Cero costo en publicidad</div>
+                    <div class="b2b-feature-item"><i class="fa-solid fa-circle-check"></i> Clientes filtrados y seguros</div>
+                    <div class="b2b-feature-item"><i class="fa-solid fa-circle-check"></i> Fidelización y crecimiento mutuo</div>
+                </div>
+            </div>
+            
+            <div class="b2b-action-box">
+                <h3>¿Eres Dueño de Empresa?</h3>
+                <p>Únete hoy a nuestra red estratégica y recibe clientes calificados directamente desde nuestra central.</p>
+                <a href="https://wa.me/584126100684?text=Hola,%20quiero%20registrar%20mi%20empresa%20en%20la%20red%20de%20aliados%20de%20TodoSoluciones" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                    <i class="fa-brands fa-whatsapp"></i> Registrar mi Empresa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Contratación Inmediata con los Tres Números -->
+    <div class="modal-overlay" id="modalContratacion">
+        <div class="modal-box">
+            <button class="modal-close" onclick="cerrarModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem;">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>Contratación Inmediata</h3>
+            <p id="textoServicioSeleccionado">Has seleccionado un servicio de nuestra red corporativa. Comunícate a través de cualquiera de nuestros números oficiales:</p>
+            
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px; margin-bottom: 1.5rem; border: 1px solid var(--border-color); text-align: left;">
+                <p style="margin: 0 0 0.5rem 0; font-size: 0.85rem; color: var(--navy-dark); font-weight: 700;"><i class="fa-solid fa-phone"></i> Central Telefónica 24/7:</p>
+                <p style="margin: 0.25rem 0; font-size: 0.95rem; color: var(--primary-blue); font-weight: 800;">1. 0412-6100684</p>
+                <p style="margin: 0.25rem 0; font-size: 0.95rem; color: var(--primary-blue); font-weight: 800;">2. 0412-0906860</p>
+                <p style="margin: 0.25rem 0; font-size: 0.95rem; color: var(--primary-blue); font-weight: 800;">3. 0426-2842432</p>
+            </div>
+
+            <a href="https://wa.me/584126100684?text=Hola,%20deseo%20contratar%20el%20servicio%20de:%20" id="whatsappLink" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                <i class="fa-brands fa-whatsapp"></i> Confirmar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer Ejecutivo -->
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>TodoSoluciones 24/7 C.F.T.</h3>
+                <p>Organización líder dedicada a la provisión estructurada de servicios corporativos, residenciales y técnicos.</p>
+                <div style="background: rgba(255,255,255,0.03); padding: 0.85rem; border-left: 3px solid var(--accent-gold); margin-top: 1rem;">
+                    <p style="color: var(--accent-light); font-weight: 700; margin: 0; font-size: 0.9rem;">"Si no lo tenemos, te lo conseguimos"</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Central Telefónica de Contacto</h3>
+                <p><i class="fa-solid fa-phone"></i> 0412-6100684</p>
+                <p><i class="fa-solid fa-phone"></i> 0412-0906860</p>
+                <p><i class="fa-solid fa-phone"></i> 0426-2842432</p>
+            </div>
+            <div class="footer-col">
+                <h3>Garantía de Servicio</h3>
+                <p><i class="fa-solid fa-clock"></i> Operaciones y mesa de atención activa de manera ininterrumpida las 24 horas, los 7 días de la semana.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TodoSoluciones 24/7 C.F.T. Todos los derechos reservados. Estándares corporativos de máxima confiabilidad para Venezuela.</p>
+        </div>
+    </footer>
+
+    <!-- Script para el funcionamiento del Modal -->
+    <script>
+        function abrirModal(nombreServicio) {
+            const modal = document.getElementById('modalContratacion');
+            const texto = document.getElementById('textoServicioSeleccionado');
+            const whatsappLink = document.getElementById('whatsappLink');
+            
+            texto.innerHTML = `Has solicitado la contratación inmediata del servicio de: <strong style="color: var(--navy-dark);">${nombreServicio}</strong>. Comunícate a través de cualquiera de nuestros números oficiales o haz clic abajo:`;
+            whatsappLink.href = `https://wa.me/584126100684?text=Hola,%20deseo%20contratar%20inmediatamente%20el%20servicio%20de:%20${encodeURIComponent(nombreServicio)}`;
+            
+            modal.classList.add('active');
+        }
+
+        function cerrarModal() {
+            const modal = document.getElementById('modalContratacion');
+            modal.classList.remove('active');
+        }
+
+        // Cerrar al hacer clic fuera del cuadro
+        window.onclick = function(event) {
+            const modal = document.getElementById('modalContratacion');
+            if (event.target == modal) {
+                cerrarModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
